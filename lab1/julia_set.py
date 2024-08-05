@@ -6,7 +6,6 @@ from matplotlib.colors import LinearSegmentedColormap
 
 # For pytorch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print(f"Using device: {device}")
 
 # For julia set
 c = complex(-0.4, 0.6)
