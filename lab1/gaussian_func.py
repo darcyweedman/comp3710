@@ -16,6 +16,9 @@ x = x.to(device)
 y = y.to(device)
 
 # Compute Gaussian
+# Different options just so I don't have to type it out in demo.
+# z = torch.exp(-(x**2+y**2)/2.0)
+# z = torch.sin(x) * torch.sin(y)
 z = (torch.sin(x) * torch.sin(y)) * (torch.exp(-(x**2+y**2)/2.0))
 
 plt.imshow(z.cpu().numpy())#Updated!

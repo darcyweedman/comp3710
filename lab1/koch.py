@@ -39,7 +39,6 @@ def koch_snowflake(iterations, device):
 
 # Determine the device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using device: {device}")
 
 # Compute the Koch snowflake fractal
 iterations = 6
