@@ -1,9 +1,10 @@
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
+from typing import List
 
 # Function to perform one iteration of the Koch curve transformation
-def koch_iteration(points, device):
+def koch_iteration(points: np.array, device: torch.device) -> List[np.array]:
     new_points = []
     for i in range(len(points) - 1):
         start = torch.tensor(points[i], device=device)
@@ -23,7 +24,7 @@ def koch_iteration(points, device):
     return new_points
 
 # Function to generate the Koch snowflake fractal
-def koch_snowflake(iterations, device):
+def koch_snowflake(iterations: int, device: torch.device) -> np.array:
     # Initial equilateral triangle
     points = np.array([[0, 0],
                        [1, 0],
