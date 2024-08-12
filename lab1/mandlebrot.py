@@ -46,7 +46,7 @@ print(f"Computation time: {end_time - start_time:.2f} seconds")
 # Plot
 plt.figure(figsize=(20,20))
 
-def processFractal(a):
+def processFractal(a: torch.Tensor) -> torch.Tensor:
     """Display an array of iteration counts as a
     colorful picture of a fractal."""
     a_cyclic = (6.28*a/20.0).reshape(list(a.shape)+[1])
